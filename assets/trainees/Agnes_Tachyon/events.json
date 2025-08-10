@@ -1,0 +1,98 @@
+{
+  "actor_id": "agnes_tachyon",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.at_tachyons_pace",
+      "title": "At Tachyon's Pace",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Top Option",
+          "effects": { "guts": 10 }
+        },
+        {
+          "index": 2,
+          "label": "Bottom Option",
+          "effects": { "speed": 5, "power": 5 }
+        }
+      ]
+    },
+    {
+      "event_id": "ev.the_strongest_collaborator",
+      "title": "The Strongest Collaborator?!",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Top Option",
+          "effects": { "energy": -20, "stamina": 15, "guts": 10 }
+        },
+        {
+          "index": 2,
+          "label": "Bottom Option",
+          "effects": { "energy": 5, "wisdom": 5 }
+        }
+      ]
+    },
+    {
+      "event_id": "ev.the_pressure_of_justice",
+      "title": "The Pressure of Justice?",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Top Option",
+          "effects": { "wisdom": 10, "skill_points": 15 }
+        },
+        {
+          "index": 2,
+          "label": "Bottom Option",
+          "effects": { "hint_corner_adept_o": 1 }
+        }
+      ]
+    },
+    {
+      "event_id": "ev.hamburger_helper",
+      "title": "Hamburger Helper!",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Top Option",
+          "effects": { "energy": 10, "skill_points": 5 }
+        },
+        {
+          "index": 2,
+          "label": "Bottom Option (~90%)",
+          "effects": { "energy": 30, "skill_points": 10 }
+        },
+        {
+          "index": 3,
+          "label": "Bottom Option (~10%)",
+          "effects": {
+            "energy": 30,
+            "skill_points": 10,
+            "speed": -5,
+            "power": 5,
+            "status_slow_metabolism": 1
+          }
+        }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "speed",
+    "stamina",
+    "power",
+    "guts",
+    "wisdom",
+    "skill_points",
+    "bond",
+    "energy",
+    "hint_corner_adept_o",
+    "status_slow_metabolism"
+  ]
+}

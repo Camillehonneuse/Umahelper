@@ -1,0 +1,10 @@
+{
+  "actors": [
+    {
+      "id": "agnes_tachyon",
+      "type": "card",
+      "display_name": "Agnes Tachyon",
+      "aliases": ["Tachyon"]
+    }
+  ]
+}
