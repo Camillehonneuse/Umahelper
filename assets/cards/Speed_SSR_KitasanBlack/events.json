@@ -1,0 +1,38 @@
+{
+  "actor_id": "kitasan_black",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.paying_it_forward",
+      "title": "Paying It Forward",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "mood": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "speed": [5, 10], "hint_straightaway_adept": [1, 3], "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.ah_friendship",
+      "title": "Ah, Friendship",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 1, "power": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.ah_home_sweet_home",
+      "title": "Ah, Home Sweet Home",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 5, "power": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "status_practice_perfect_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","mood","bond","speed","power",
+    "hint_straightaway_adept","status_practice_perfect_o"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "actor_id": "tamamo_cross",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.tamamos_school_tour",
+      "title": "Tamamo's School Tour",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "wisdom": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "stamina": 5, "guts": 5, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.a_battle_i_cant_lose",
+      "title": "A Battle I Can't Lose!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_calm_in_a_crowd": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "stamina": 5, "wisdom": 5, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "wisdom","bond","stamina","guts","hint_calm_in_a_crowd"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "actor_id": "narita_taishin",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.just_leave_me_alone",
+      "title": "Just Leave Me Alone",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "stamina": 5, "skill_points": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "power": 5, "skill_points": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.just_dont_bother_me",
+      "title": "Just Don't Bother Me",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_pressure": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "skill_points": 30, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "stamina","skill_points","bond","power","hint_pressure"
+  ]
+}

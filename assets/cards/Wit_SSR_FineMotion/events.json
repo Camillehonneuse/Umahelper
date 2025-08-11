@@ -1,0 +1,38 @@
+{
+  "actor_id": "fine_motion",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.lovely_training_weather",
+      "title": "Lovely Training Weather ♪",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "wisdom": 5, "skill_points": 20, "bond": 5 } },
+        { "index": 2, "label": "Middle Option", "effects": { "speed": 10, "stamina": 5 } },
+        { "index": 3, "label": "Bottom Option", "effects": { "status_practice_perfect_o": 1, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.wonderful_new_shoes",
+      "title": "Wonderful New Shoes",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 5, "skill_points": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "stamina": 5, "skill_points": 20, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.reminiscent_clover",
+      "title": "Reminiscent Clover",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_corner_adept_o": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "guts": 15, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "wisdom","skill_points","bond","speed","stamina","status_practice_perfect_o","energy","hint_corner_adept_o","guts"
+  ]
+}

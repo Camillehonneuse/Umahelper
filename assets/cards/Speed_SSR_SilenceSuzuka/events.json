@@ -1,0 +1,28 @@
+{
+  "actor_id": "silence_suzuka",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.on_and_on",
+      "title": "On and On",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 10, "stamina": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "speed": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.what_should_i_do",
+      "title": "What Should I Do?",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 5, "stamina": 5, "wisdom": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_left_handed_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "speed","stamina","bond","wisdom","hint_left_handed_o"
+  ]
+}
