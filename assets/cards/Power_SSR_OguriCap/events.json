@@ -1,0 +1,51 @@
+{
+  "actor_id": "oguri_cap",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.how_should_i_respond_skills",
+      "title": "How Should I Respond?",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "power": 5, "skill_points": 10, "hint_stamina_to_spare": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "stamina": 5, "skill_points": 10, "hint_outer_swell": 1, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.what_i_want_to_say",
+      "title": "What I Want to Say",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Top Option",
+          "effects": { "power": [10, 15], "guts": [5, 10], "skill_points": [10, 15], "hint_furious_feat": [1, 3], "bond": 5 }
+        },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 30 } }
+      ]
+    },
+    {
+      "event_id": "ev.how_should_i_respond_reward",
+      "title": "How Should I Respond?",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 5, "power": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "guts": 15 } }
+      ]
+    },
+    {
+      "event_id": "ev.conquering_the_crowds",
+      "title": "Conquering the Crowds",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "power": 5, "skill_points": 15 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_nakayama_racecourse_o": 1 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "power","skill_points","hint_stamina_to_spare","bond","stamina","hint_outer_swell",
+    "guts","hint_furious_feat","energy","hint_nakayama_racecourse_o"
+  ]
+}

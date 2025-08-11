@@ -1,0 +1,57 @@
+{
+  "actor_id": "mejiro_palmer",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.run_away_to_first_base",
+      "title": "Run Away to First Base",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -15, "stamina": 10, "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -15, "guts": 10, "wisdom": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.runaway_romance",
+      "title": "Runaway Romance",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "guts": 5, "wisdom": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 10, "hint_front_runner_savvy_o": 1, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.optimistic_escapism_never_give_up",
+      "title": "Optimistic Escapism: Never Give Up!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -20, "stamina": 5, "guts": 5, "hint_vanguard_spirit": 3, "hint_keeping_the_lead": [1, 3], "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 10, "hint_lone_wolf": 1 } }
+      ]
+    },
+    {
+      "event_id": "ev.an_inescapable_choice",
+      "title": "An Inescapable Choice?",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -15, "guts": 20, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "power": 5, "skill_points": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.optimistic_escapism",
+      "title": "Optimistic Escapism",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "guts": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_wet_conditions_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","stamina","guts","bond","wisdom","hint_front_runner_savvy_o",
+    "hint_vanguard_spirit","hint_keeping_the_lead","hint_lone_wolf","power",
+    "skill_points","hint_wet_conditions_o"
+  ]
+}

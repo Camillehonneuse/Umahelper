@@ -1,0 +1,28 @@
+{
+  "actor_id": "haru_urara",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.uraras_study_review",
+      "title": "Urara's ☆ Study Review",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "wisdom": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "mood": 1, "wisdom": 5, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.uraras_long_shot_dash",
+      "title": "Urara's ☆ Long Shot Dash!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_long_shot_o": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "mood": 1, "energy": 10, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","wisdom","bond","mood","hint_long_shot_o"
+  ]
+}

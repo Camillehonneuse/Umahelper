@@ -1,0 +1,46 @@
+{
+  "actor_id": "yukino_bijin",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.cozy_memories_of_wanko_soba",
+      "title": "Cozy Memories of Wanko Soba",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "max_energy": 4, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.the_class_reps_intense_crash_course",
+      "title": "The Class Rep's Intense Crash Course",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 1, "power": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "power": 3, "guts": 3, "wisdom": 3, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.for_a_spiffy_concert",
+      "title": "For a Spiffy Concert",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "guts": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.aiming_for_the_city_spots",
+      "title": "Aiming for the City Spots",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -10, "mood": 1, "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_corner_acceleration_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "mood","bond","max_energy","power","guts","wisdom","energy","hint_corner_acceleration_o"
+  ]
+}

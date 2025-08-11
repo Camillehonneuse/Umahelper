@@ -1,0 +1,46 @@
+{
+  "actor_id": "ines_fujin",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.aim_for_that_sparkling_moment",
+      "title": "Aim for That Sparkling Moment!",
+      "title_variants": [],
+      "choices": [
+        { 
+          "index": 1, 
+          "label": "Auto", 
+          "effects": { 
+            "energy": -10, 
+            "guts": [10, 20], 
+            "wisdom": [0, 5], 
+            "hint_restless": [1, 3], 
+            "hint_moxie": [1, 0] 
+          } 
+        }
+      ]
+    },
+    {
+      "event_id": "ev.its_a_game_of_tag",
+      "title": "It's a Game of Tag!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "speed": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_fast_paced": 1, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.ten_minutes_left",
+      "title": "Ten Minutes Left!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "guts": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "wisdom": 15, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","guts","wisdom","hint_restless","hint_moxie","speed","bond","hint_fast_paced"
+  ]
+}

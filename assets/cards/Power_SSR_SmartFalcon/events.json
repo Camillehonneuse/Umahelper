@@ -1,0 +1,37 @@
+{
+  "actor_id": "smart_falcon",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.always_on_stage",
+      "title": "Always on Stage",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "wisdom": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 25, "hint_focus": 1, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.chants_are_the_life_of_a_concert",
+      "title": "Chants Are the Life of a Concert",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "stamina": 5, "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "wisdom": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.if_im_cute_come_to_my_show",
+      "title": "If I'm Cute, Come to My Show!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -10, "power": 10, "hint_final_push": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 10, "wisdom": 5, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "wisdom","bond","energy","hint_focus","stamina","guts","power","hint_final_push"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "actor_id": "special_week",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.just_a_little_closer",
+      "title": "Just a Little Closer",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -10, "speed": 15, "bond": 5 } },
+        { "index": 2, "label": "Middle Option", "effects": { "energy": -10, "skill_points": 20, "bond": 5 } },
+        { "index": 3, "label": "Bottom Option", "effects": { "energy": -10, "hint_shake_it_out": 1, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.forms_of_aspiration",
+      "title": "Forms of Aspiration",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Auto",
+          "effects": { "energy": 10, "speed": [5, 10], "skill_points": [0, 10], "hint_hydrate": [0, 3], "hint_gourmand": [0, 3] }
+        }
+      ]
+    },
+    {
+      "event_id": "ev.watch_where_youre_going",
+      "title": "Watch Where You're Going!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_extra_tank": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "guts": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.so_many_options",
+      "title": "So Many Options!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "mood": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "stamina": 15, "skill_points": 15, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","speed","bond","skill_points","hint_shake_it_out","hint_hydrate","hint_gourmand",
+    "guts","hint_extra_tank","mood","stamina"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "actor_id": "yaeno_muteki",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.firm_and_plain_yet_close_to_virtue",
+      "title": "Firm and Plain, Yet Close to Virtue",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 10 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "mood": 1, "power": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.the_will_to_protect",
+      "title": "The Will to Protect!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "stamina": 10, "power": 10 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_medium_corners_o": 1 } }
+      ]
+    },
+    {
+      "event_id": "ev.a_reasonable_diet_vs_explosive_diet",
+      "title": "A Reasonable Diet vs. an Explosive Diet",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "skill_points": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 10, "wisdom": 10, "skill_points": 10, "hint_playtimes_over": 3 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "speed","mood","power","stamina",
+    "hint_medium_corners_o",
+    "energy","skill_points","bond","wisdom",
+    "hint_playtimes_over"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "actor_id": "special_week_guts",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.a_roller_coaster_of_feelings",
+      "title": "A Roller Coaster of Feelings!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -10, "speed": 5, "stamina": 5, "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 20, "wisdom": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.our_audience",
+      "title": "Our Audience",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Auto",
+          "effects": {
+            "energy": -10,
+            "speed": [5, 15],
+            "stamina": [5, 15],
+            "guts": [5, 15],
+            "hint_homestretch_haste": [0, 1],
+            "hint_in_body_and_mind": [0, 3],
+            "bond": 5
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "ev.watch_where_youre_going",
+      "title": "Watch Where You're Going!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_extra_tank": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "guts": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.so_many_options",
+      "title": "So Many Options!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "mood": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "stamina": 15, "skill_points": 15, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","speed","stamina","guts","bond","wisdom","hint_homestretch_haste",
+    "hint_in_body_and_mind","hint_extra_tank","mood","skill_points"
+  ]
+}
