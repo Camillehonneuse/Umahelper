@@ -1,0 +1,28 @@
+{
+  "actor_id": "biko_pegasus",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.a_heros_woes",
+      "title": "A Hero's Woes",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 5, "power": 5, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.preparing_my_special_move",
+      "title": "Preparing My Special Move!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_sprint_straightaways_o": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 30, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","bond","power","hint_sprint_straightaways_o"
+  ]
+}

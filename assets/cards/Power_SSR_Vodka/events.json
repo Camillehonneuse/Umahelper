@@ -1,0 +1,28 @@
+{
+  "actor_id": "vodka",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.the_coolest_line",
+      "title": "The Coolest Line",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "power": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "power": 5, "skill_points": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.enemies_on_main_street",
+      "title": "Enemies on Main Street",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_nimble_navigator": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "power": 5, "skill_points": 15, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "power","bond","skill_points","hint_nimble_navigator"
+  ]
+}

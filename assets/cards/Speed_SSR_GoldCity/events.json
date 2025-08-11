@@ -1,0 +1,28 @@
+{
+  "actor_id": "gold_city",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.crap_i_overslept",
+      "title": "08:36 / Crap, I Overslept",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": -1, "skill_points": 45, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 10, "wisdom": 5, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.lunch_break_gotta_get_myself_together",
+      "title": "13:12 / Lunch Break, Gotta Get Myself Together",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "skill_points": 30, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_a_small_breather": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "mood","skill_points","bond","energy","wisdom","hint_a_small_breather"
+  ]
+}

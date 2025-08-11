@@ -1,0 +1,47 @@
+{
+  "actor_id": "satono_diamond",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.diamond_fixation",
+      "title": "Diamond Fixation",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "wisdom": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": [ -1, 15 ], "stamina": [ 0, 10 ], "guts": [ 0, 20 ], "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.only_for_you",
+      "title": "Only for You",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -20, "stamina": 30, "hint_iron_will": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 5, "guts": 5, "hint_iron_will": 1, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.i_love_new_things",
+      "title": "I Love New Things!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "stamina": 20, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.i_love_complicated_things",
+      "title": "I Love Complicated Things!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "stamina": 5, "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_hesitant_front_runners": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "wisdom","bond","energy","stamina","guts",
+    "hint_iron_will","hint_hesitant_front_runners"
+  ]
+}

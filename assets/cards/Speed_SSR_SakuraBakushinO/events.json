@@ -1,0 +1,28 @@
+{
+  "actor_id": "sakura_bakushin_o",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.genius_efficiency",
+      "title": "Genius Efficiency!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "speed": 5, "power": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.enough_to_break_into_a_dash",
+      "title": "Enough to Break into a Dash!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_gap_closer": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "speed": 10, "power": 5, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "speed","bond","power","hint_gap_closer","energy"
+  ]
+}

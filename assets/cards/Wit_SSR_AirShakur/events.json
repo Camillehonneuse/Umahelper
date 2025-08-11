@@ -1,0 +1,28 @@
+{
+  "actor_id": "air_shakur",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.verification_required",
+      "title": "Verification Required",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "guts": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "stamina": 5, "guts": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.absolute_desire",
+      "title": "Absolute Desire",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_pace_strategy": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "max_energy": 4, "guts": 5, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","guts","bond","stamina","hint_pace_strategy","max_energy"
+  ]
+}

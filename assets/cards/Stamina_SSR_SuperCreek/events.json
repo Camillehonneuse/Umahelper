@@ -1,0 +1,28 @@
+{
+  "actor_id": "super_creek",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.leave_it_to_me_to_help_out",
+      "title": "Leave it to Me to Help Out!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "stamina": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.leave_it_to_me_to_be_considerate",
+      "title": "Leave it to Me to Be Considerate!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_deep_breaths": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 10, "stamina": 5, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","bond","stamina","hint_deep_breaths"
+  ]
+}

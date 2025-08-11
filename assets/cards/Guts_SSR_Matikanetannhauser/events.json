@@ -1,0 +1,56 @@
+{
+  "actor_id": "matikanetannhauser",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.seeking_uniqueness",
+      "title": "Seeking Uniqueness!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": [10, 30], "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.unique_running",
+      "title": "Unique Running?",
+      "title_variants": [],
+      "choices": [
+        { 
+          "index": 1, 
+          "label": "Auto", 
+          "effects": { 
+            "power": [5, 10], 
+            "skill_points": [10, 15], 
+            "bond": 5, 
+            "hint_unruffled": [0, 3], 
+            "hint_calm_in_a_crowd": [0, 3] 
+          } 
+        }
+      ]
+    },
+    {
+      "event_id": "ev.just_your_typical_hard_work",
+      "title": "Just Your Typical Hard Work!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "power": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.just_a_typical_accident",
+      "title": "Just A Typical Accident?!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "stamina": 5, "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_subdued_front_runners": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "mood","bond","energy","power","skill_points",
+    "hint_unruffled","hint_calm_in_a_crowd","speed","stamina","guts","hint_subdued_front_runners"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "actor_id": "tokai_teio",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.my_way_or",
+      "title": "My Way, Or...",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 1, "skill_points": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "guts": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.my_weapon",
+      "title": "My Weapon",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 1, "guts": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_pace_chaser_straightaways_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "mood","skill_points","bond","guts","hint_pace_chaser_straightaways_o"
+  ]
+}
