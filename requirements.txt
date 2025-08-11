@@ -1,9 +1,8 @@
-pillow
-imagehash
-opencv-python
-pywin32
-mss
-pytesseract
-rapidfuzz
-PySide6
-numpy
+numpy==1.26.4
+opencv-python===4.6.0.66
+paddlepaddle==2.6.1
+paddleocr==2.7.3
+Pillow==10.3.0
+rapidfuzz==3.6.1
+PySide6==6.5.3
+mss==9.0.1
