@@ -26,16 +26,27 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller==6.*
 
+      - name: Sanity check Paddle imports
+        run: |
+          python - << 'PY'
+          import paddle, paddleocr
+          print("paddle:", paddle.__version__)
+          import importlib; importlib.import_module("paddleocr._pipelines.ocr")
+          print("paddleocr OK")
+          PY
+
       - name: Build EXE with PyInstaller
-        # PowerShell uses backticks for line continuation
         run: |
           pyinstaller main.py `
             --name UmaHelper `
             --onefile `
             --noconsole `
+            --clean `
             --collect-all paddleocr `
             --collect-all paddle `
             --collect-all PySide6 `
+            --hidden-import paddle `
+            --hidden-import paddleocr `
             --add-data "assets;assets" `
             --add-data "roi;roi"
 
