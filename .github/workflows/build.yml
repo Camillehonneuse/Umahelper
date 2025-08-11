@@ -15,22 +15,27 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python 3.10
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install dependencies (pinned)
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller mss pillow pytesseract rapidfuzz PySide6 numpy opencv-python pywin32
+          pip install -r requirements.txt
+          pip install pyinstaller==6.*
 
       - name: Build EXE with PyInstaller
+        # PowerShell uses backticks for line continuation
         run: |
           pyinstaller main.py `
             --name UmaHelper `
             --onefile `
             --noconsole `
+            --collect-all paddleocr `
+            --collect-all paddle `
+            --collect-all PySide6 `
             --add-data "assets;assets" `
             --add-data "roi;roi"
 
