@@ -1,0 +1,28 @@
+{
+  "actor_id": "gold_ship",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.adventurer_gold_ship",
+      "title": "Adventurer Gold Ship",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "stamina": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "guts": 10, "skill_points": 15, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.revive_the_brand_golshis_yakisoba",
+      "title": "Revive the Brand! Golshi's Yakisoba",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 1, "stamina": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_hanshin_racecourse_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "stamina","bond","guts","skill_points","mood","hint_hanshin_racecourse_o"
+  ]
+}

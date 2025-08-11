@@ -1,0 +1,46 @@
+{
+  "actor_id": "grass_wonder",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.a_moments_respite",
+      "title": "A Moment's Respite",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": [-10, 0], "power": 5, "guts": 5, "wisdom": [5, 10], "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.hidden_petals",
+      "title": "Hidden Petals",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Auto", "effects": { "energy": -10, "speed": 5, "guts": [5, 10], "wisdom": 5, "hint_updrafters": [1, 0], "hint_furious_feat": [0, 3], "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.library_vexation",
+      "title": "Library Vexation",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "wisdom": 10, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "guts": 5, "wisdom": 5, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.a_friendly_daytime_discussion",
+      "title": "A Friendly Daytime Discussion",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_frenzied_pace_chasers": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_target_in_sight_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","bond","power","guts","wisdom","speed",
+    "hint_updrafters","hint_furious_feat","hint_frenzied_pace_chasers","hint_target_in_sight_o"
+  ]
+}

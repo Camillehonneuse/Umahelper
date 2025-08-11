@@ -1,0 +1,56 @@
+{
+  "actor_id": "twin_turbo",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.im_not_afraid",
+      "title": "I'm Not Afraid!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 10, "energy": [0, -10], "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 20 } }
+      ]
+    },
+    {
+      "event_id": "ev.cant_catch_me",
+      "title": "Can't Catch Me!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": [10, 15], "energy": [0, -10], "hint_leaders_pride": [0, 3], "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 25 } }
+      ]
+    },
+    {
+      "event_id": "ev.turbo_is_strong",
+      "title": "Turbo Is Strong!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -10, "speed": [5, 25], "hint_early_lead": [0, 3], "hint_taking_the_lead": [0, 3], "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 15, "hint_watchful_eye": 1 } }
+      ]
+    },
+    {
+      "event_id": "ev.just_start_running",
+      "title": "Just Start Running!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": -1, "speed": 20 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "power": 20 } }
+      ]
+    },
+    {
+      "event_id": "ev.im_all_fired_up",
+      "title": "I'm All Fired Up!",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_early_lead": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "speed","energy","bond","hint_leaders_pride","hint_early_lead","hint_taking_the_lead",
+    "hint_watchful_eye","mood","power"
+  ]
+}

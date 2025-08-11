@@ -1,0 +1,37 @@
+{
+  "actor_id": "nishino_flower",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.aspiring_to_adulthood",
+      "title": "Aspiring to Adulthood",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": -10, "wisdom": 20, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "wisdom": 5, "skill_points": 15 } }
+      ]
+    },
+    {
+      "event_id": "ev.warmth_love_and_lunch",
+      "title": "Warmth, Love, and Lunch",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "status_get_charming_o": 1, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": 20, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.lets_bloom_beautifully",
+      "title": "Let's Bloom Beautifully",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "wisdom": 15, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "speed": 10, "power": 5, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "energy","wisdom","bond","skill_points","status_get_charming_o","speed","power"
+  ]
+}
