@@ -26,9 +26,11 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller==6.*
 
+      # Simple sanity checks that work with paddleocr 2.7.3
       - name: Sanity check Paddle imports
         run: |
-          python -c "import importlib, paddle, paddleocr; print('paddle:', paddle.__version__); importlib.import_module('paddleocr._pipelines.ocr'); print('paddleocr OK')"
+          python -c "import paddle; print('paddle:', paddle.__version__)"
+          python -c "from paddleocr import PaddleOCR, __version__ as v; print('paddleocr:', v)"
 
       - name: Build EXE with PyInstaller
         run: |
@@ -37,8 +39,8 @@ jobs:
             --onefile `
             --noconsole `
             --clean `
-            --collect-all paddleocr `
             --collect-all paddle `
+            --collect-all paddleocr `
             --collect-all PySide6 `
             --hidden-import paddle `
             --hidden-import paddleocr `
