@@ -28,12 +28,7 @@ jobs:
 
       - name: Sanity check Paddle imports
         run: |
-          python - << 'PY'
-          import paddle, paddleocr
-          print("paddle:", paddle.__version__)
-          import importlib; importlib.import_module("paddleocr._pipelines.ocr")
-          print("paddleocr OK")
-          PY
+          python -c "import importlib, paddle, paddleocr; print('paddle:', paddle.__version__); importlib.import_module('paddleocr._pipelines.ocr'); print('paddleocr OK')"
 
       - name: Build EXE with PyInstaller
         run: |
