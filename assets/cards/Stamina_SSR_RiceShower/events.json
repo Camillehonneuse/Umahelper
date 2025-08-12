@@ -1,0 +1,28 @@
+{
+  "actor_id": "rice_shower",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.a_page_of_flower_shop_assistance",
+      "title": "A Page of Flower Shop Assistance",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "mood": 2, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "stamina": 10, "bond": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.a_page_about_cloudy_weather",
+      "title": "A Page About Cloudy Weather",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "speed": 5, "guts": 5, "bond": 5 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "hint_firm_conditions_o": 1, "bond": 5 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "mood","bond","stamina","speed","guts","hint_firm_conditions_o"
+  ]
+}
