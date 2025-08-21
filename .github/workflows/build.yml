@@ -1,62 +1,77 @@
-name: Build UmaHelper EXE
+name: Build EXE (cx_Freeze)
 
 on:
   push:
-    branches: [ "main" ]
-  release:
-    types: [published]
-  workflow_dispatch:
+  pull_request:
 
 jobs:
-  build-windows:
+  windows-build:
     runs-on: windows-latest
 
+    env:
+      PYTHON_VERSION: "3.10"
+      APP_NAME: "UmaHelper"
+      ENTRY_SCRIPT: "main.py"
+
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.10
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: "pip"
 
-      - name: Install dependencies (pinned)
+      - name: Show Python info
+        run: |
+          python -V
+          pip -V
+
+      - name: Install build tools
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pyinstaller==6.*
+          pip install wheel setuptools
 
-      # Simple sanity checks that work with paddleocr 2.7.3
-      - name: Sanity check Paddle imports
+      - name: Install project dependencies
         run: |
-          python -c "import paddle; print('paddle:', paddle.__version__)"
-          python -c "from paddleocr import PaddleOCR, __version__ as v; print('paddleocr:', v)"
+          if (Test-Path requirements.txt) {
+            pip install -r requirements.txt
+          } else {
+            pip install `
+              numpy==1.26.4 `
+              opencv-python==4.6.0.66 `
+              paddlepaddle==2.6.1 `
+              paddleocr==2.7.3 `
+              Pillow==10.3.0 `
+              rapidfuzz==3.6.1 `
+              PySide6==6.5.3 `
+              mss==9.0.1
+          }
 
-      - name: Build EXE with PyInstaller
+      - name: Install cx_Freeze
         run: |
-          pyinstaller main.py `
-            --name UmaHelper `
-            --onefile `
-            --noconsole `
-            --clean `
-            --collect-all paddle `
-            --collect-all paddleocr `
-            --collect-all PySide6 `
-            --hidden-import paddle `
-            --hidden-import paddleocr `
-            --add-data "assets;assets" `
-            --add-data "roi;roi"
+          pip install cx-Freeze==7.2.5
 
-      - name: Upload EXE artifact
+      - name: Ensure setup script points to entry script
+        run: |
+          (Get-Content setup_cxfreeze.py) `
+            -replace 'ENTRY_SCRIPT = ".*"', 'ENTRY_SCRIPT = "' + $env:ENTRY_SCRIPT + '"') `
+            | Set-Content setup_cxfreeze.py
+
+      - name: Build with cx_Freeze
+        run: |
+          python setup_cxfreeze.py build
+        shell: pwsh
+
+      - name: Show build output
+        run: |
+          Get-ChildItem -Recurse build | Select-Object FullName
+
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: UmaHelper-Windows
-          path: dist/UmaHelper.exe
-
-      - name: Upload to Release
-        if: github.event_name == 'release'
-        uses: softprops/action-gh-release@v2
-        with:
-          files: dist/UmaHelper.exe
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: ${{ env.APP_NAME }}-windows-cxfreeze
+          path: |
+            build\exe*\${{ env.APP_NAME }}.exe
+          if-no-files-found: error
