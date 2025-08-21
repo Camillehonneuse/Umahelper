@@ -54,10 +54,10 @@ jobs:
           pip install cx-Freeze==7.2.5
 
       - name: Ensure setup script points to entry script
+        shell: bash
         run: |
-          (Get-Content setup_cxfreeze.py) `
-            -replace 'ENTRY_SCRIPT = ".*"', 'ENTRY_SCRIPT = "' + $env:ENTRY_SCRIPT + '"') `
-            | Set-Content setup_cxfreeze.py
+          sed -E -i 's/ENTRY_SCRIPT[[:space:]]*=[[:space:]]*".*"/ENTRY_SCRIPT = "'"$ENTRY_SCRIPT"'"/' setup_cxfreeze.py
+
 
       - name: Build with cx_Freeze
         run: |
