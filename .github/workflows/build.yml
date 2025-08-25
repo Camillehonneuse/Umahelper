@@ -10,7 +10,7 @@ jobs:
 
     env:
       PYTHON_VERSION: "3.10"
-      ENTRY_SCRIPT: "umahelper.py"   # change if your main file is different
+      ENTRY_SCRIPT: "main.py"
       APP_NAME: "UmaHelper"
 
     steps:
@@ -35,8 +35,6 @@ jobs:
           python -m pip install --upgrade pip wheel setuptools
           pip install cx-Freeze==7.2.5
 
-      # Prefer explicit installs (clean + deterministic). If you have a requirements.txt,
-      # you can swap this step to `pip install -r requirements.txt` after updating it.
       - name: Install project dependencies
         shell: pwsh
         run: |
@@ -50,34 +48,42 @@ jobs:
             PySide6==6.5.3 `
             mss==9.0.1
 
-      # Optional: if you committed the downloader and want offline-first builds,
-      # uncomment to prefetch models into ./paddle_models (bundled by your setup)
-      # - name: Pre-download PaddleOCR models (optional)
-      #   shell: pwsh
-      #   run: |
-      #     python - << 'PY'
-      #     import os
-      #     from pathlib import Path
-      #     os.environ["PADDLEOCR_HOME"] = str((Path(".")/"paddle_models").resolve())
-      #     from paddleocr import PaddleOCR
-      #     PaddleOCR(lang="en", use_gpu=False)
-      #     print("Models saved to:", os.environ["PADDLEOCR_HOME"])
-      #     PY
+      - name: Sanity check imports (paddle vs paddlepaddle)
+        shell: pwsh
+        run: |
+          python - << 'PY'
+          import sys
+          try:
+              import paddle
+              print("OK: import paddle ->", getattr(paddle, '__version__', 'unknown'))
+          except Exception as e:
+              print("FAIL: import paddle:", e); sys.exit(1)
+          try:
+              import paddlepaddle  # should NOT exist as a module
+              print("Unexpected: 'paddlepaddle' is importable")
+              sys.exit(1)
+          except Exception:
+              print("OK: 'paddlepaddle' is not a module (as expected)")
+          PY
+
+      - name: Show setup script (ensure it does not mention 'paddlepaddle')
+        shell: pwsh
+        run: |
+          Select-String -Path setup_cxfreeze.py -Pattern "paddlepaddle" -SimpleMatch -CaseSensitive | % { $_ } || echo "OK: no 'paddlepaddle' string"
 
       - name: Clean previous build
         shell: pwsh
         run: |
           python -c "import shutil; shutil.rmtree('build', ignore_errors=True)"
 
-
       - name: Build with cx_Freeze
         shell: pwsh
         env:
-          ENTRY_SCRIPT: ${{ env.ENTRY_SCRIPT }}   # setup_cxfreeze.py reads this
+          ENTRY_SCRIPT: ${{ env.ENTRY_SCRIPT }}
         run: |
           python setup_cxfreeze.py build
 
-      - name: Show build output
+      - name: List build output
         shell: pwsh
         run: |
           Get-ChildItem -Recurse build | Select-Object FullName
