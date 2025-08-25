@@ -1,17 +1,17 @@
-name: Build EXE (cx_Freeze)
+name: Build Windows EXE (cx_Freeze)
 
 on:
   push:
   pull_request:
 
 jobs:
-  windows-build:
+  build-windows:
     runs-on: windows-latest
 
     env:
       PYTHON_VERSION: "3.10"
+      ENTRY_SCRIPT: "main.py" 
       APP_NAME: "UmaHelper"
-      ENTRY_SCRIPT: "main.py"
 
     steps:
       - name: Checkout
@@ -23,55 +23,73 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: "pip"
 
-      - name: Show Python info
+      - name: Python info
+        shell: pwsh
         run: |
           python -V
           pip -V
 
-      - name: Install build tools
+      - name: Install build tooling
+        shell: pwsh
         run: |
-          python -m pip install --upgrade pip
-          pip install wheel setuptools
-
-      - name: Install project dependencies
-        run: |
-          if (Test-Path requirements.txt) {
-            pip install -r requirements.txt
-          } else {
-            pip install `
-              numpy==1.26.4 `
-              opencv-python==4.6.0.66 `
-              paddlepaddle==2.6.1 `
-              paddleocr==2.7.3 `
-              Pillow==10.3.0 `
-              rapidfuzz==3.6.1 `
-              PySide6==6.5.3 `
-              mss==9.0.1
-          }
-
-      - name: Install cx_Freeze
-        run: |
+          python -m pip install --upgrade pip wheel setuptools
           pip install cx-Freeze==7.2.5
 
-      - name: Ensure setup script points to entry script
-        shell: bash
+      # Prefer explicit installs (clean + deterministic). If you have a requirements.txt,
+      # you can swap this step to `pip install -r requirements.txt` after updating it.
+      - name: Install project dependencies
+        shell: pwsh
         run: |
-          sed -E -i 's/ENTRY_SCRIPT[[:space:]]*=[[:space:]]*".*"/ENTRY_SCRIPT = "'"$ENTRY_SCRIPT"'"/' setup_cxfreeze.py
+          pip install `
+            numpy==1.26.4 `
+            opencv-python-headless==4.6.0.66 `
+            paddlepaddle==2.6.1 `
+            paddleocr==2.7.3 `
+            Pillow==10.3.0 `
+            rapidfuzz==3.6.1 `
+            PySide6==6.5.3 `
+            mss==9.0.1
 
+      # Optional: if you committed the downloader and want offline-first builds,
+      # uncomment to prefetch models into ./paddle_models (bundled by your setup)
+      # - name: Pre-download PaddleOCR models (optional)
+      #   shell: pwsh
+      #   run: |
+      #     python - << 'PY'
+      #     import os
+      #     from pathlib import Path
+      #     os.environ["PADDLEOCR_HOME"] = str((Path(".")/"paddle_models").resolve())
+      #     from paddleocr import PaddleOCR
+      #     PaddleOCR(lang="en", use_gpu=False)
+      #     print("Models saved to:", os.environ["PADDLEOCR_HOME"])
+      #     PY
+
+      - name: Clean previous build
+        shell: pwsh
+        run: |
+          python - << 'PY'
+          import shutil, os
+          for d in ("build", ):
+              shutil.rmtree(d, ignore_errors=True)
+          PY
 
       - name: Build with cx_Freeze
+        shell: pwsh
+        env:
+          ENTRY_SCRIPT: ${{ env.ENTRY_SCRIPT }}   # setup_cxfreeze.py reads this
         run: |
           python setup_cxfreeze.py build
-        shell: pwsh
 
       - name: Show build output
+        shell: pwsh
         run: |
           Get-ChildItem -Recurse build | Select-Object FullName
 
-      - name: Upload artifact
+      - name: Upload EXE and build folder
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.APP_NAME }}-windows-cxfreeze
+          name: ${{ env.APP_NAME }}-win-cxfreeze
           path: |
             build\exe*\${{ env.APP_NAME }}.exe
+            build\exe*\
           if-no-files-found: error
