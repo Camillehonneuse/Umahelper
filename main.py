@@ -22,6 +22,28 @@ from PySide6.QtGui import QPainter, QColor, QPen, QMouseEvent, QGuiApplication, 
 import cv2
 import numpy as np
 
+
+import logging
+
+# =========================
+# Logging setup
+# =========================
+LOG_FILE = Path(__file__).resolve().with_name("umahelper.log")
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_FILE, encoding="utf-8"),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+
+def _log(*msg):
+    logging.info(" ".join(str(m) for m in msg))
+
+
+
 # =========================
 # Settings / Paths
 # =========================
@@ -62,10 +84,8 @@ def enable_dpi_awareness():
 # =========================
 # PaddleOCR setup (CPU, version-tolerant)
 # =========================
-try:
-    from paddleocr import PaddleOCR
-except Exception:
-    PaddleOCR = None  # will raise on init
+from paddleocr import PaddleOCR
+
 
 _OCR = None
 
