@@ -1,0 +1,162 @@
+{
+  "actor_id": "special_week",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.a_beautiful_day_for_tennis",
+      "title": "A Beautiful Day for Tennis",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Trust your reflexes and take the front position!", "effects": { "speed": 10 } },
+        { "index": 2, "label": "Trust your stamina and take the back position!", "effects": { "stamina": 10 } }
+      ]
+    },
+    {
+      "event_id": "ev.a_place_i_want_to_take_you",
+      "title": "A Place I Want to Take You",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "You really worked hard to get that crown to her.", "effects": { "wisdom": 10 } },
+        { "index": 2, "label": "A flower crown of gratitude. How sweet.", "effects": { "stamina": 10 } }
+      ]
+    },
+    {
+      "event_id": "ev.at_summer_camp_year_2",
+      "title": "At Summer Camp (Year 2)",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "You need to get stronger.", "effects": { "power": 10 } },
+        { "index": 2, "label": "You need to strengthen your resolve.", "effects": { "guts": 10 } }
+      ]
+    },
+    {
+      "event_id": "ev.because_its_special",
+      "title": "Because It's Special",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Where do you usually go with your mom?", "effects": { "stamina": 10 } },
+        { "index": 2, "label": "Where do you usually go with your friends?", "effects": { "speed": 10 } }
+      ]
+    },
+    {
+      "event_id": "ev.dance_lesson",
+      "title": "Dance Lesson (Special Week)",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "The most important thing is to fully express yourself when you dance.", "effects": { "guts": 10 } },
+        { "index": 2, "label": "It's crucial to move to the beat.", "effects": { "stamina": 10 } }
+      ]
+    },
+    {
+      "event_id": "ev.early_afternoon_payback",
+      "title": "Early Afternoon Payback",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Just have fun eating!", "effects": { "energy": 5, "wisdom": 5 } },
+        { "index": 2, "label": "I'm afraid I've got nothing!", "effects": { "hint_pace_strategy": 1 } }
+      ]
+    },
+    {
+      "event_id": "ev.just_a_little_more",
+      "title": "Just a Little More",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Let's work on your finishing dashes.", "effects": { "hint_homestretch_haste": 1 } },
+        { "index": 2, "label": "Let's work on your cornering.", "effects": { "hint_corner_adept_o": 1 } }
+      ]
+    },
+    {
+      "event_id": "ev.karaoke_connoisseur",
+      "title": "Karaoke Connoisseur ♪",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "For everyone's sake and for your own, get some energy!", "effects": { "energy": 10 } },
+        { "index": 2, "label": "For everyone's sake and for your own, strengthen your resolve!", "effects": { "power": 10 } }
+      ]
+    },
+    {
+      "event_id": "ev.putting_it_away_at_the_cafeteria",
+      "title": "Putting It Away at the Cafeteria",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "It's important for your meals to be balanced right now!", "effects": { "energy": 10, "skill_points": 5 } },
+        {
+          "index": 2,
+          "label": "You'll be fine as long as you exercise afterward!",
+          "effects": { "energy": 30, "skill_points": 10, "speed": -5, "power": 5, "status_slow_metabolism": 1 }
+        }
+      ]
+    },
+    {
+      "event_id": "ev.new_years_resolutions",
+      "title": "New Year's Resolutions",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Let's work on improving your strong points!", "effects": { "stamina": 10 } },
+        { "index": 2, "label": "You should be mindful of your health!", "effects": { "energy": 20 } },
+        { "index": 3, "label": "You should learn the top techniques in Japan!", "effects": { "skill_points": 20 } }
+      ]
+    },
+    {
+      "event_id": "ev.new_years_shrine_visit",
+      "title": "New Year's Shrine Visit",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "To get stronger!", "effects": { "energy": 30 } },
+        { "index": 2, "label": "To elevate your abilities!", "effects": { "all_stats": 5 } },
+        { "index": 3, "label": "To learn a variety of skills!", "effects": { "skill_points": 35 } }
+      ]
+    },
+    {
+      "event_id": "ev.dont_over_do_it",
+      "title": "Don't Over Do It!",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Top Option",
+          "effects": { "energy": 10, "mood": -2, "status_practice_poor": 1 }
+        },
+        {
+          "index": 2,
+          "label": "Attempt Success",
+          "effects": { "status_practice_perfect": 1 }
+        },
+        {
+          "index": 3,
+          "label": "Attempt Fail",
+          "effects": { "mood": -3, "status_practice_poor": 1 }
+        }
+      ]
+    },
+    {
+      "event_id": "ev.extra_training",
+      "title": "Extra Training (Special Week)",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Got it! Then let's do some more laps until you're satisfied!", "effects": { "energy": -5, "last_trained_stat": 5, "bond": 5 } },
+        { "index": 2, "label": "Don't get too excited, or you might overdo it.", "effects": { "energy": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.get_well_soon",
+      "title": "Get Well Soon! (Special Week)",
+      "title_variants": [],
+      "choices": [
+        {
+          "index": 1,
+          "label": "Top Option",
+          "effects": { "mood": -1, "last_trained_stat": -5, "status_practice_poor": 1 }
+        },
+        { "index": 2, "label": "Attempt Success", "effects": { "status_practice_perfect": 1 } },
+        { "index": 3, "label": "Attempt Fail", "effects": { "mood": -1, "last_trained_stat": -10, "status_practice_poor": 1 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "speed","stamina","wisdom","power","guts","energy","last_trained_stat","bond",
+    "hint_pace_strategy","hint_homestretch_haste","hint_corner_adept_o","skill_points",
+    "all_stats","mood","status_slow_metabolism","status_practice_poor","status_practice_perfect"
+  ]
+}

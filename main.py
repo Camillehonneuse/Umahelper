@@ -1,6 +1,7 @@
 # UmaHelper (Multi-Monitor + Split Windows, ROI overlay fix, threaded Scan)
 # Deps (CPU only):
 #   pip install mss pillow paddleocr rapidfuzz PySide6 numpy opencv-python
+# pyinstaller -y main.spec to install the exe !!!
 
 import sys, ctypes, json
 from pathlib import Path

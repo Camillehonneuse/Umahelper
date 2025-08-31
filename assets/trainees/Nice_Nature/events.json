@@ -1,0 +1,84 @@
+{
+  "actor_id": "nice_nature",
+  "actor_type": "card",
+  "language": "en",
+  "events": [
+    {
+      "event_id": "ev.nature_and_her_tired_trainer",
+      "title": "Nature and Her Tired Trainer",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "power": 20 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "stamina": 20 } }
+      ]
+    },
+    {
+      "event_id": "ev.bittersweet_sparkle",
+      "title": "Bittersweet Sparkle",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "power": 20 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "speed": 20 } }
+      ]
+    },
+    {
+      "event_id": "ev.festive_colors",
+      "title": "Festive Colors",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "guts": 20, "status_charming": [0, 1] } },
+        { "index": 2, "label": "Bottom Option", "effects": { "stamina": 20, "status_charming": [0, 1] } }
+      ]
+    },
+    {
+      "event_id": "ev.rainy_day_fun",
+      "title": "Rainy-Day Fun",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "wisdom": 10 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "energy": -10, "stamina": 10, "guts": 10 } }
+      ]
+    },
+    {
+      "event_id": "ev.not_my_style",
+      "title": "Not My Style",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 5, "mood": 1 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "speed": 5, "power": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.whirlwind_advice",
+      "title": "Whirlwind Advice",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "hint_studious": 1 } },
+        { "index": 2, "label": "Bottom Option", "effects": { "speed": 5, "stamina": 5, "power": 5 } }
+      ]
+    },
+    {
+      "event_id": "ev.a_little_cant_hurt",
+      "title": "A Little Can't Hurt",
+      "title_variants": [],
+      "choices": [
+        { "index": 1, "label": "Top Option", "effects": { "energy": 10, "skill_points": 5 } },
+        { "index": 2, "label": "Bottom Option (~90%)", "effects": { "energy": 30, "skill_points": 10 } },
+        { "index": 3, "label": "Bottom Option (~10%)", "effects": { "energy": 30, "skill_points": 10, "speed": -5, "power": 5, "status_slow_metabolism": 1 } }
+      ]
+    }
+  ],
+  "effect_keys": [
+    "speed",
+    "stamina",
+    "power",
+    "guts",
+    "wisdom",
+    "skill_points",
+    "energy",
+    "mood",
+    "hint_studious",
+    "status_charming",
+    "status_slow_metabolism"
+  ]
+}
